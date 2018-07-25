@@ -11,6 +11,7 @@ public class SpringbootDruidJpaApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

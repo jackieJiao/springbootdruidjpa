@@ -22,8 +22,8 @@ import java.util.Map;
 public class DruidConfiguration {
 
     @SuppressWarnings("unchecked")
-    protected <T> T createDataSource(DataSourceProperties properties,
-                                     Class<? extends DataSource> type) {
+    protected <T> T createDataSource(DataSourceProperties properties, Class<? extends DataSource> type)
+    {
         return (T) properties.initializeDataSourceBuilder().type(type).build();
     }
 
