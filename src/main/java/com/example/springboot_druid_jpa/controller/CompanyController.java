@@ -1,6 +1,7 @@
 package com.example.springboot_druid_jpa.controller;
-import com.example.springboot_druid_jpa.beans.TCompany;
-import com.example.springboot_druid_jpa.repository.CompanyRepository;
+
+import com.example.springboot_druid_jpa.beans.tcompany.TCompany;
+import com.example.springboot_druid_jpa.repository.company.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

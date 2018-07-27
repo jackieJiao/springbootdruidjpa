@@ -17,8 +17,10 @@ package com.example.springboot_druid_jpa;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
-import com.example.springboot_druid_jpa.beans.TCompany;
-import com.example.springboot_druid_jpa.repository.CompanyRepository;
+
+import com.example.springboot_druid_jpa.beans.tcompany.TCompany;
+import com.example.springboot_druid_jpa.repository.company.CompanyRepository;
+import com.example.springboot_druid_jpa.repository.test.TestRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +38,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@ActiveProfiles("multi-datasource")
 public class DruidMultiDataSourceTestCase {
 
     @Resource
@@ -44,12 +47,15 @@ public class DruidMultiDataSourceTestCase {
     private DruidDataSource dataSourceTwo;
     @Autowired
     private CompanyRepository tCompanyRepository;
+    @Autowired
+    private TestRepository testRepository;
 
 
 
     @Test
     public void testDataSourceOne() throws SQLException {
         System.out.println("&&&&&&&&&&&&&"+tCompanyRepository.findById("0d180abd7096e3f6a501d27082b61a60").orElse(new TCompany()).getCompanyName());
+        System.out.println("%%%%%%%%%%%%%"+ testRepository.findById("12345").orElse(new com.example.springboot_druid_jpa.beans.test.Ttaxcredit()).getCompanyName());
 
 
     }

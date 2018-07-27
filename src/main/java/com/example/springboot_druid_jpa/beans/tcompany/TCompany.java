@@ -1,10 +1,8 @@
-package com.example.springboot_druid_jpa.beans;
-
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+package com.example.springboot_druid_jpa.beans.tcompany;
 
 import javax.persistence.Entity;
-import javax.persistence.*;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
